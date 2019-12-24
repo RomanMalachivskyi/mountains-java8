@@ -63,6 +63,7 @@
 			<artifactId>commons-collections</artifactId>
 			<version>3.2.1</version>
 		</dependency>
+
 		<!-- db <dependency> <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> 
 			<version>5.1.36</version> </dependency> -->
 		<dependency>
@@ -227,7 +228,7 @@
 				<dependency>
 					<groupId>mysql</groupId>
 					<artifactId>mysql-connector-java</artifactId>
-					<version>5.1.36</version>
+					<version>8.0.18</version>
 				</dependency>
 			</dependencies>
 		</profile>
@@ -241,7 +242,7 @@
 				<dependency>
 					<groupId>mysql</groupId>
 					<artifactId>mysql-connector-java</artifactId>
-					<version>5.1.36</version>
+					<version>8.0.18</version>
 				</dependency>
 			</dependencies>
 		</profile>

@@ -1,13 +1,9 @@
 package com.home.education.mountains.resource.impl;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+import com.home.education.mountains.resource.WeatherCondition;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -27,6 +23,7 @@ public class Route extends GenericResourceImpl {
 	private String name;
 	@Length(max = 100, message = "Description cannot be greater than 100 characters")
 	private String description;
+	private WeatherCondition weatherCondition;
 
 	@Column(name = "name", nullable = false)
 	public String getName() {
@@ -63,6 +60,14 @@ public class Route extends GenericResourceImpl {
 	public void setCategoryId(int categoryId) {
 		this.categoryId = categoryId;
 	}
+
+	@Column(name = "WeatherCondition")
+	@Enumerated(EnumType.STRING)
+	public WeatherCondition getWeatherCondition() {
+		return weatherCondition;
+	}
+
+	public void setWeatherCondition(WeatherCondition weatherCondition) { this.weatherCondition = weatherCondition;}
 
 	@Override
 	@Id
